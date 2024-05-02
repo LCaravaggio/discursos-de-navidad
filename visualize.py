@@ -5,7 +5,7 @@ import scattertext as st
 import spacy
 from spacy.lang.es.stop_words import STOP_WORDS
 nlp = spacy.load('es_core_news_sm', disable=['parser', 'ner', 'textcat'])
-nlp.add_pipe(nlp.create_pipe('sentencizer'))
+nlp.add_pipe(nlp.add_pipe('sentencizer'))
 nlp.max_length = 1500000
 #nlp = spacy.load('es')
 
